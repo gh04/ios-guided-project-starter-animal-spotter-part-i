@@ -13,17 +13,26 @@ class AnimalsTableViewController: UITableViewController {
     // MARK: - Properties
     
     private var animalNames: [String] = []
-
+//creating a new model controller AT launch. Use for all API request. that API controller will be able to tell whether we need to log in or not.
+    
+    //bearer
+    let apiController = APIController()
+    
     // MARK: - View Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
+    //we want the transition to be visible to the user. Not viewWillAppear
+    //giving context to where they were and where they went. 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        // transition to login view if conditions require
+        //if there is no bearer object segue to the login mode.
+        if apiController.bearer == nil {
+            //triggering the segue in code. (like in storyboard.) Segue to the login mode.
+            performSegue(withIdentifier: "LoginViewModalSegue", sender: self)
+        }
     }
 
     // MARK: - Table view data source
@@ -53,6 +62,13 @@ class AnimalsTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "LoginViewModalSegue" {
             // inject dependencies
+            if let loginVC = segue.destination as? LoginViewController {
+                //injecting apiController we made in this class into loginVC apiController property so they are the same thing.
+                //Important design pattern to deal with different objects in code.. Commonly asked in interviews. 
+                loginVC.apiController = apiController
+            }
+            
+            //APIController. Forwarding from table view controller to the login view controller to make sure it is the same  APIController and thus the same bearer token. One of the dependencies . We are doing dependency injection .
         }
     }
 }

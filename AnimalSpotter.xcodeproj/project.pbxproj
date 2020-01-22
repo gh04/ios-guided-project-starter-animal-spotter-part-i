@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6341E48623D7DE060026ACA5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6341E48523D7DE060026ACA5 /* User.swift */; };
+		6341E48823D7E5820026ACA5 /* Bearer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6341E48723D7E5820026ACA5 /* Bearer.swift */; };
 		CEB8F70C236B8D3600455692 /* AnimalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB8F70B236B8D3600455692 /* AnimalDetailViewController.swift */; };
 		CEDCA57B22668AB2009EA535 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDCA57A22668AB2009EA535 /* AppDelegate.swift */; };
 		CEDCA58022668AB2009EA535 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDCA57E22668AB2009EA535 /* Main.storyboard */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6341E48523D7DE060026ACA5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		6341E48723D7E5820026ACA5 /* Bearer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bearer.swift; sourceTree = "<group>"; };
 		CEB8F70B236B8D3600455692 /* AnimalDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDetailViewController.swift; sourceTree = "<group>"; };
 		CEDCA57722668AB2009EA535 /* AnimalSpotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimalSpotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEDCA57A22668AB2009EA535 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +45,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6341E48923D7F71B0026ACA5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6341E48523D7DE060026ACA5 /* User.swift */,
+				6341E48723D7E5820026ACA5 /* Bearer.swift */,
+				CEDCA599226697BD009EA535 /* APIController.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		CEDCA56E22668AB2009EA535 = {
 			isa = PBXGroup;
 			children = (
@@ -62,7 +76,7 @@
 			children = (
 				CEDCA59722669673009EA535 /* Application */,
 				CEDCA5982266967E009EA535 /* View Controllers */,
-				CEDCA5962266966C009EA535 /* Models */,
+				6341E48923D7F71B0026ACA5 /* Models */,
 				CEDCA57E22668AB2009EA535 /* Main.storyboard */,
 				CEDCA58122668AB2009EA535 /* Assets.xcassets */,
 				CEDCA58322668AB2009EA535 /* LaunchScreen.storyboard */,
@@ -71,18 +85,10 @@
 			path = AnimalSpotter;
 			sourceTree = "<group>";
 		};
-		CEDCA5962266966C009EA535 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		CEDCA59722669673009EA535 /* Application */ = {
 			isa = PBXGroup;
 			children = (
 				CEDCA57A22668AB2009EA535 /* AppDelegate.swift */,
-				CEDCA599226697BD009EA535 /* APIController.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -170,6 +176,8 @@
 			files = (
 				CEB8F70C236B8D3600455692 /* AnimalDetailViewController.swift in Sources */,
 				CEDCA59A226697BD009EA535 /* APIController.swift in Sources */,
+				6341E48623D7DE060026ACA5 /* User.swift in Sources */,
+				6341E48823D7E5820026ACA5 /* Bearer.swift in Sources */,
 				CEDCA59122668D0F009EA535 /* LoginViewController.swift in Sources */,
 				CEDCA57B22668AB2009EA535 /* AppDelegate.swift in Sources */,
 				CEDCA58F22668BCF009EA535 /* AnimalsTableViewController.swift in Sources */,
