@@ -17,6 +17,8 @@ class AnimalDetailViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var animalImageView: UIImageView!
     
+    var animalName: String?
+    
     // MARK: - View Lifecycle
 
     override func viewDidLoad() {
